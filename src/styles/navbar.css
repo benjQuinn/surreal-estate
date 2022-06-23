@@ -21,8 +21,8 @@
     display: inline-block;
 }
 
-.navbar-links-item > a {
+.item {
     text-decoration: inherit;
     color: inherit;
-    font-weight: bold;
+    font-weight: 700;
 }
