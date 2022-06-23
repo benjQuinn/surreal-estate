@@ -3,11 +3,24 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    column-gap: 1.5em;
 }
 
 .navbar-logo {
-    width: 15%;
+    width: 20%;
+    display: flex;
+    padding-left: 2%;
+    column-gap: 5%;
+}
+
+.navbar-logo-icon {
+    color: #774872;
+    font-size: 2rem;
+    display: inline;
+}
+
+.navbar-logo-title {
+    display: inline;
+    font-weight: 800;
 }
 
 .navbar-links {
@@ -24,5 +37,6 @@
 .item {
     text-decoration: inherit;
     color: inherit;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
