@@ -1,7 +1,4 @@
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,11 +10,11 @@ code {
 
 html, body, #root {
   height: 100%;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 img, picture, video, canvas, svg {

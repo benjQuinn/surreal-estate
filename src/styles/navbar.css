@@ -1,0 +1,28 @@
+.navbar {
+    border-bottom: 1px solid #B2B2B2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1.5em;
+}
+
+.navbar-logo {
+    width: 15%;
+}
+
+.navbar-links {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links-item {
+    margin: 0;
+    padding: 25px;
+    display: inline-block;
+}
+
+.navbar-links-item > a {
+    text-decoration: inherit;
+    color: inherit;
+    font-weight: bold;
+}
