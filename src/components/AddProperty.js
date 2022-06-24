@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/add-property.css";
 import { IoAddCircle } from "react-icons/io5";
+import axios from "axios";
 
 const AddProperty = () => {
   const initialState = {
@@ -17,9 +18,18 @@ const AddProperty = () => {
 
   const [fields, setFields] = useState(initialState.fields);
 
-  const handleAddProperty = (event) => {
+  const handleAddProperty = async (event) => {
     event.preventDefault();
-    console.log(fields);
+    const SURREAL_EASTATE_API_URL = `http://localhost:4000/api/v1`;
+    try {
+      const res = await axios.post(
+        `${SURREAL_EASTATE_API_URL}/PropertyListing`,
+        fields
+      );
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleFieldChange = (event) => {
