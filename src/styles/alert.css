@@ -1,0 +1,19 @@
+.alert {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-weight: 100;
+}
+
+.alert.alert-error {
+    border: 1px solid rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 174, 174);
+    
+}
+
+.alert.alert-success {
+    border: 1px solid rgb(0, 189, 69);
+    color: rgb(0, 189, 69);
+    background-color: rgb(194, 246, 198);
+}

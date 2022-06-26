@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "../styles/add-property.css";
 import { IoAddCircle } from "react-icons/io5";
 import axios from "axios";
+import Alert from "./Alert";
+
+const SURREAL_EASTATE_API_URL = `http://localhost:4000/api/v1`;
 
 const AddProperty = () => {
   const initialState = {
@@ -14,21 +17,35 @@ const AddProperty = () => {
       city: "Manchester",
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = async (event) => {
     event.preventDefault();
-    const SURREAL_EASTATE_API_URL = `http://localhost:4000/api/v1`;
+    setAlert({ message: "", isSuccess: false });
+
     try {
       const res = await axios.post(
         `${SURREAL_EASTATE_API_URL}/PropertyListing`,
         fields
       );
       console.log(res);
+      setAlert({
+        message: "Property successfully added!",
+        isSuccess: true,
+      });
     } catch (err) {
       console.log(err);
+      setAlert({
+        message: "Server error. Please try again later.",
+        isSuccess: false,
+      });
     }
   };
 
@@ -39,7 +56,8 @@ const AddProperty = () => {
   return (
     <div className="add-property">
       <h1>Add a Property</h1>
-      <form onSubmit={handleAddProperty}>
+      <Alert message={alert.message} success={alert.isSuccess} />
+      <form data-testid="add-property-form" onSubmit={handleAddProperty}>
         <label htmlFor="title">
           Title
           <br />

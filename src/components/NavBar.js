@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbar-logo">
-        <GiCastle className="navbar-logo-icon" />
+        <GiCastle className="navbar-logo-icon" data-testid="navbar-logo-icon" />
         <h1 className="navbar-logo-title">Surreal Estate</h1>
       </div>
       <ul className="navbar-links">

@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProperty renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="add-property"
+  >
+    <h1>
+      Add a Property
+    </h1>
+    <form
+      data-testid="add-property-form"
+    >
+      <label
+        for="title"
+      >
+        Title
+        <br />
+        <input
+          id="title"
+          name="title"
+          placeholder="Property tagline..."
+          type="text"
+          value=""
+        />
+      </label>
+      <label
+        for="type"
+      >
+        Type
+        <br />
+        <select
+          id="type"
+          name="type"
+        >
+          <option
+            value="Flat"
+          >
+            Flat
+          </option>
+          <option
+            value="Detached"
+          >
+            Detached
+          </option>
+          <option
+            value="Semi-Detached"
+          >
+            Semi-Detached
+          </option>
+          <option
+            value="Terraced"
+          >
+            Terraced
+          </option>
+          <option
+            value="End of Terrace"
+          >
+            End of Terrace
+          </option>
+          <option
+            value="Cottage"
+          >
+            Cottage
+          </option>
+          <option
+            value="Bungalow"
+          >
+            Bungalow
+          </option>
+        </select>
+      </label>
+      <label
+        for="bedrooms"
+      >
+        Bedrooms
+        <br />
+        <input
+          id="bedrooms"
+          name="bedrooms"
+          placeholder="How many bedrooms?"
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        for="bathrooms"
+      >
+        Bathrooms
+        <br />
+        <input
+          id="bathrooms"
+          name="bathrooms"
+          placeholder="How many bathrooms?"
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        for="price"
+      >
+        Price
+        <br />
+        <input
+          id="price"
+          name="price"
+          placeholder="Price.."
+          type="number"
+          value=""
+        />
+      </label>
+      <label
+        for="city"
+      >
+        City
+        <br />
+        <select
+          id="city"
+          name="city"
+        >
+          <option
+            value="Manchester"
+          >
+            Manchester
+          </option>
+          <option
+            value="Leeds"
+          >
+            Leeds
+          </option>
+          <option
+            value="Sheffield"
+          >
+            Sheffield
+          </option>
+          <option
+            value="Liverpool"
+          >
+            Liverpool
+          </option>
+        </select>
+      </label>
+      <label
+        for="email"
+      >
+        Email
+        <br />
+        <input
+          id="email"
+          name="email"
+          placeholder="john.smith@email.co.uk"
+          type="text"
+          value=""
+        />
+      </label>
+      <button
+        type="submit"
+      >
+        <svg
+          class="submit-icon"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm80 224h-64v64a16 16 0 01-32 0v-64h-64a16 16 0 010-32h64v-64a16 16 0 0132 0v64h64a16 16 0 010 32z"
+          />
+        </svg>
+      </button>
+    </form>
+  </div>
+</DocumentFragment>
+`;
