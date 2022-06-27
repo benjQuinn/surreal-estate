@@ -154,6 +154,7 @@ exports[`AddProperty renders correctly 1`] = `
         />
       </label>
       <button
+        class="add-property-button"
         type="submit"
       >
         <svg

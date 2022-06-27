@@ -151,7 +151,7 @@ const AddProperty = () => {
             placeholder="john.smith@email.co.uk"
           />
         </label>
-        <button type="submit">
+        <button className="add-property-button" type="submit">
           <IoAddCircle className="submit-icon" />
         </button>
       </form>

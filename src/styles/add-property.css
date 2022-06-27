@@ -16,7 +16,7 @@ input {
     width: 20%;
 }
 
-button {
+.add-property-button {
     margin: 10px;
     background-color: transparent;
     border: 0;
