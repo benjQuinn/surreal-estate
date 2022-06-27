@@ -4,8 +4,8 @@ import PropType from "prop-types";
 import { GiCastle } from "react-icons/gi";
 import { FaBath, FaBed, FaPoundSign, FaRegEnvelope } from "react-icons/fa";
 
-const PropertyCard = ({ validProps }) => {
-  const { title, type, city, bedrooms, bathrooms, price } = validProps;
+const PropertyCard = ({ property }) => {
+  const { title, type, city, bedrooms, bathrooms, price } = property;
   const formattedPrice = price.toLocaleString("en-GB", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -43,7 +43,7 @@ const PropertyCard = ({ validProps }) => {
 };
 
 PropertyCard.propTypes = {
-  validProps: PropType.shape({
+  property: PropType.shape({
     title: PropType.string.isRequired,
     type: PropType.string.isRequired,
     bathrooms: PropType.number.isRequired,
