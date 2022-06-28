@@ -14,13 +14,13 @@ describe("PropertyCard", () => {
   };
 
   it("renders correctly", () => {
-    const { asFragment } = render(<PropertyCard property={validProps} />);
+    const { asFragment } = render(<PropertyCard {...validProps} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
   it("renders prop values correctly", () => {
-    const { getByText } = render(<PropertyCard property={validProps} />);
+    const { getByText } = render(<PropertyCard {...validProps} />);
 
     expect(getByText(/5 bedroom house/i).textContent).toBe(validProps.title);
     expect(getByText(/detached - manchester/i).textContent).toBe(

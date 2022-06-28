@@ -35,7 +35,8 @@ const AddProperty = () => {
         `${SURREAL_EASTATE_API_URL}/PropertyListing`,
         fields
       );
-      console.log(res);
+      console.log("Fields --->", fields);
+      console.log("Response -->", res);
       setAlert({
         message: "Property successfully added!",
         isSuccess: true,
@@ -50,7 +51,12 @@ const AddProperty = () => {
   };
 
   const handleFieldChange = (event) => {
-    setFields({ ...fields, [event.target.name]: event.target.value });
+    setFields({
+      ...fields,
+      [event.target.name]: !parseInt(event.target.value, 10)
+        ? event.target.value
+        : event.target.valueAsNumber,
+    });
   };
 
   return (

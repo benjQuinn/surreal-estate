@@ -1,5 +1,9 @@
 .add-property {
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.add-property > h1 {
+    margin-bottom: 10px;
 }
 
 label {
@@ -14,6 +18,10 @@ form {
 
 input {
     width: 20%;
+}
+
+select {
+    width: 15%;
 }
 
 .add-property-button {

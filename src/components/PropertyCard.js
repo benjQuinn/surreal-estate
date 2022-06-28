@@ -4,8 +4,15 @@ import PropType from "prop-types";
 import { GiCastle } from "react-icons/gi";
 import { FaBath, FaBed, FaPoundSign, FaRegEnvelope } from "react-icons/fa";
 
-const PropertyCard = ({ property }) => {
-  const { title, type, city, bedrooms, bathrooms, price } = property;
+const PropertyCard = ({
+  title,
+  type,
+  city,
+  bedrooms,
+  bathrooms,
+  price,
+  email,
+}) => {
   const formattedPrice = price.toLocaleString("en-GB", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -34,7 +41,7 @@ const PropertyCard = ({ property }) => {
           {formattedPrice}
         </li>
       </ul>
-      <button className="property-card-email-button" type="submit">
+      <button className="property-card-email-button" type="button" href={email}>
         <FaRegEnvelope className="propert-card-icon" />
         Email
       </button>
@@ -43,15 +50,13 @@ const PropertyCard = ({ property }) => {
 };
 
 PropertyCard.propTypes = {
-  property: PropType.shape({
-    title: PropType.string.isRequired,
-    type: PropType.string.isRequired,
-    bathrooms: PropType.number.isRequired,
-    bedrooms: PropType.number.isRequired,
-    price: PropType.number.isRequired,
-    city: PropType.string.isRequired,
-    email: PropType.string.isRequired,
-  }).isRequired,
+  title: PropType.string.isRequired,
+  type: PropType.string.isRequired,
+  bathrooms: PropType.number.isRequired,
+  bedrooms: PropType.number.isRequired,
+  price: PropType.number.isRequired,
+  city: PropType.string.isRequired,
+  email: PropType.string.isRequired,
 };
 
 export default PropertyCard;

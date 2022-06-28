@@ -3,10 +3,10 @@
 }
 
 .properties > h1 {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
 }
 
-.properties > .item {
+.properties > .properties-item {
     display: inline-block;
     width: 33.33%;
     padding: 0.5rem;

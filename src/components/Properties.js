@@ -15,7 +15,11 @@ const Properties = () => {
       try {
         await axios
           .get(`${SURREAL_EASTATE_API_URL}/PropertyListing`)
-          .then((res) => setProperties(res.data));
+          .then((res) => {
+            setProperties(res.data);
+            console.log(res.data);
+            console.log(res.headers["content-type"]);
+          });
       } catch (err) {
         setAlert({ message: "Unable to fetch data. Try again later." });
         console.log(err);
@@ -29,7 +33,7 @@ const Properties = () => {
       <h1>Properties</h1>
       <Alert message={alert.message} success={alert.isSuccess} />
       {properties.map((property) => (
-        <div key={property.id} className="properties-item">
+        <div key={property._id} className="properties-item">
           <PropertyCard {...property} />
         </div>
       ))}
