@@ -17,8 +17,6 @@ const Properties = () => {
           .get(`${SURREAL_EASTATE_API_URL}/PropertyListing`)
           .then((res) => {
             setProperties(res.data);
-            console.log(res.data);
-            console.log(res.headers["content-type"]);
           });
       } catch (err) {
         setAlert({ message: "Unable to fetch data. Try again later." });

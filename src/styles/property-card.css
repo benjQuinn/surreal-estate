@@ -47,3 +47,6 @@
     font-size: 1em;
 }
 
+.property-card > a{
+    text-decoration: inherit;
+}

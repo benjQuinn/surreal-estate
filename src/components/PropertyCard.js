@@ -13,7 +13,7 @@ const PropertyCard = ({
   price,
   email,
 }) => {
-  const formattedPrice = price.toLocaleString("en-GB", {
+  const formattedPrice = parseInt(price, 10).toLocaleString("en-GB", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   });
@@ -41,10 +41,12 @@ const PropertyCard = ({
           {formattedPrice}
         </li>
       </ul>
-      <button className="property-card-email-button" type="button" href={email}>
-        <FaRegEnvelope className="propert-card-icon" />
-        Email
-      </button>
+      <a href={`mailto:${email}`}>
+        <button className="property-card-email-button" type="button">
+          <FaRegEnvelope className="propert-card-icon" />
+          Email
+        </button>
+      </a>
     </div>
   );
 };
@@ -52,9 +54,9 @@ const PropertyCard = ({
 PropertyCard.propTypes = {
   title: PropType.string.isRequired,
   type: PropType.string.isRequired,
-  bathrooms: PropType.number.isRequired,
-  bedrooms: PropType.number.isRequired,
-  price: PropType.number.isRequired,
+  bathrooms: PropType.string.isRequired,
+  bedrooms: PropType.string.isRequired,
+  price: PropType.string.isRequired,
   city: PropType.string.isRequired,
   email: PropType.string.isRequired,
 };

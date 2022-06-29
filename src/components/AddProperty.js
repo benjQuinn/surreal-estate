@@ -31,12 +31,7 @@ const AddProperty = () => {
     setAlert({ message: "", isSuccess: false });
 
     try {
-      const res = await axios.post(
-        `${SURREAL_EASTATE_API_URL}/PropertyListing`,
-        fields
-      );
-      console.log("Fields --->", fields);
-      console.log("Response -->", res);
+      await axios.post(`${SURREAL_EASTATE_API_URL}/PropertyListing`, fields);
       setAlert({
         message: "Property successfully added!",
         isSuccess: true,
@@ -51,12 +46,7 @@ const AddProperty = () => {
   };
 
   const handleFieldChange = (event) => {
-    setFields({
-      ...fields,
-      [event.target.name]: !parseInt(event.target.value, 10)
-        ? event.target.value
-        : event.target.valueAsNumber,
-    });
+    setFields({ ...fields, [event.target.name]: event.target.value });
   };
 
   return (
