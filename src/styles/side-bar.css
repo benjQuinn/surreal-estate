@@ -1,0 +1,34 @@
+.side-bar {
+    padding: 20px 0 10px 10px;
+}
+
+.side-bar-icon {
+    font-size: 1.7rem;
+    color: #774872;
+    padding: 0 0 5px 5px;
+}
+
+.side-bar-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-bar-links-item:first-child {
+    border-top: 1px solid #b2b2b2;
+}
+
+.side-bar-links-item {
+    border-bottom: 1px solid #b2b2b2;
+    padding: 5px;
+}
+
+.side-bar-links-item:hover {
+    color: white;
+    background-color: #774872;
+}
+
+.side-bar-links-item:active {
+    color: white;
+    background-color: #976a92;
+    border: 1px solid #774872;
+}

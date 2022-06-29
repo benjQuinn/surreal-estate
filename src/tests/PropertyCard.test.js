@@ -6,10 +6,10 @@ describe("PropertyCard", () => {
   const validProps = {
     title: "5 bedroom house",
     type: "Detached",
-    bedrooms: 5,
-    bathrooms: 2,
+    bedrooms: "5",
+    bathrooms: "2",
     city: "Manchester",
-    price: 500000,
+    price: "500000",
     email: "qwerty@email.com",
   };
 
@@ -29,7 +29,7 @@ describe("PropertyCard", () => {
     expect(getByText(5).textContent).toBe(validProps.bedrooms.toString());
     expect(getByText(2).textContent).toBe(validProps.bathrooms.toString());
     expect(getByText(/500,000.00/).textContent).toBe(
-      validProps.price.toLocaleString("en-GB", {
+      parseInt(validProps.price, 10).toLocaleString("en-GB", {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       })

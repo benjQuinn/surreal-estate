@@ -1,12 +1,17 @@
-.properties { 
+.properties-outer {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+  }
+
+.properties-inner { 
     padding: 10px 20px 10px 20px;
 }
 
-.properties > h1 {
+.properties-inner > h1 {
     margin-bottom: 2px;
 }
 
-.properties > .properties-item {
+.properties-inner > .properties-item {
     display: inline-block;
     width: 33.33%;
     padding: 0.5rem;

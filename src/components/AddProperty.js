@@ -4,7 +4,7 @@ import { IoAddCircle } from "react-icons/io5";
 import axios from "axios";
 import Alert from "./Alert";
 
-const SURREAL_EASTATE_API_URL = `http://localhost:4000/api/v1`;
+const API_URL = `http://localhost:4000/api/v1`;
 
 const AddProperty = () => {
   const initialState = {
@@ -31,7 +31,7 @@ const AddProperty = () => {
     setAlert({ message: "", isSuccess: false });
 
     try {
-      await axios.post(`${SURREAL_EASTATE_API_URL}/PropertyListing`, fields);
+      await axios.post(`${API_URL}/PropertyListing`, fields);
       setAlert({
         message: "Property successfully added!",
         isSuccess: true,
