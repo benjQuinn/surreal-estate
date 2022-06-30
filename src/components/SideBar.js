@@ -61,12 +61,12 @@ const SideBar = () => {
       <FaSort className="side-bar-icon" />
       <ul className="side-bar-links">
         <li className="side-bar-links-item">
-          <Link to="/" className="item">
+          <Link to={buildQueryString("sort", { price: 1 })} className="item">
             Price: Low to High
           </Link>
         </li>
         <li className="side-bar-links-item">
-          <Link to="/" className="item">
+          <Link to={buildQueryString("sort", { price: -1 })} className="item">
             Price: High to Low
           </Link>
         </li>
