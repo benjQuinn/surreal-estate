@@ -1,6 +1,6 @@
 .properties-outer {
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 1fr 7fr;
   }
 
 .properties-inner { 
